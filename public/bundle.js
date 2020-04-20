@@ -8163,7 +8163,7 @@ function config (name) {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],34:[function(require,module,exports){
-// watchify gives nodeJs live features
+// watchify gives nodeJs live features. npm run watch
 let Peer = require('simple-peer');
 let socket = io()   // Directly connect to Host
 const video = document.querySelector('video');

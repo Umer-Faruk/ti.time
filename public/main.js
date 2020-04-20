@@ -1,4 +1,4 @@
-// watchify gives nodeJs live features
+// watchify gives nodeJs live features. npm run watch
 let Peer = require('simple-peer');
 let socket = io()   // Directly connect to Host
 const video = document.querySelector('video');
