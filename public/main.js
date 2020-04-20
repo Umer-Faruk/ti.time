@@ -26,6 +26,8 @@ navigator.mediaDevices.getUserMedia({video:true,audio:true})
         return peer;
     }
 
+  
+
     //for peer of type "init"
     function MakePeer(){
         client.gotAnswer = false; //since offer is sent, until we get the offer accepted, we initialize to false
@@ -62,6 +64,7 @@ navigator.mediaDevices.getUserMedia({video:true,audio:true})
         video.srcObject = stream;
         video.class = 'embed-responsive-item';
         document.querySelector("#peerDiv").appendChild(video);
+        video.play()
     }
 
 
@@ -76,7 +79,7 @@ navigator.mediaDevices.getUserMedia({video:true,audio:true})
     socket.on('BackAnswer',SignalAnswer);   //if answer is coming from back-end handle it, connect both client
     socket.on('SessionActive',SessionActive); // session active
     socket.on('CreatePeer',MakePeer);       // call our make peer function
-
+    
 
 })
 .catch(err => document.write(err));

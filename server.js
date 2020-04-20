@@ -27,7 +27,8 @@ function Disconnect() {
     if (clients > 0) {
         if (clients <= 2)
             this.broadcast.emit("Disconnect")
-        clients--
+        clients--;
+        this.broadcast("Remove video !!")
     }
 }
 
